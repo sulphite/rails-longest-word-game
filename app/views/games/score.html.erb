@@ -1,0 +1,18 @@
+<div class="container text-center mt-3">
+  <h1>result</h1>
+  <p>
+    <%= @message %>
+  </p>
+  <p>
+    your word:
+    <%= @word %>
+  </p>
+  <p>
+    <%= @score || 0 %>
+  </p>
+  <p>
+    your total for this session:
+    <%= @total %>
+  </p>
+  <%= link_to "play again", new_path %>
+</div>

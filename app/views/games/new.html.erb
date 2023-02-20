@@ -1,0 +1,19 @@
+<div class="container text-center mt-3">
+<h1>new game</h1>
+<div class="d-flex flex-row justify-content-center space-between my-4">
+  <% @letters.each do |l| %>
+  <div class="letter rounded">
+    <%= l %>
+  </div>
+  <% end %>
+</div>
+<form action="/score" data-turbo="false" method="post">
+  <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+  <%= hidden_field_tag(:letters_array, value = @letters.join) %>
+  <div class="input-group">
+    <input class="form-control" type="text" name="word" placeholder="input a word">
+    <input class="btn btn-outline-info" type="submit">
+  </div>
+</form>
+
+</div>
