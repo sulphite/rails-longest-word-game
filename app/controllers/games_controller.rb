@@ -1,3 +1,5 @@
+require "open-uri"
+
 class GamesController < ApplicationController
 
   #   A page to display the game settings (random letters), with a form for the user to type a word. A button to submit this form.
